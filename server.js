@@ -12,7 +12,7 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 //CONSTANTS
-const PORT = 3000; //process.env.PORT
+const PORT = process.env.PORT;
 const db = knex({
   client: 'pg',
   connection: {
@@ -41,4 +41,4 @@ app.put('/image', image.handleImage(db));
 
 app.post('/imageURL', image.handleAPICall);
 
-app.listen(PORT);
+app.listen(PORT || 3000);
