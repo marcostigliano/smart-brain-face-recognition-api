@@ -17,7 +17,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 const db = knex({
   client: 'pg',
   connection: {
-    connectString: DATABASE_URL,
+    connectionString: DATABASE_URL,
     ssl: true
   }
 });
