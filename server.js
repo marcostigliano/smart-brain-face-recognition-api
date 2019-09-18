@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //API
-app.get('/', (req, res) => {});
+app.get('/', (req, res) => {res.status(200).json('OK')});
 
 app.post('/signin', signin.handleSignin(db, bcrypt));
 
